@@ -1,0 +1,14 @@
+{
+    "from": {
+        "host": "localhost",
+        "user": "postgres",
+        "password": "sistemas",
+        "dbname": "hades_pro"
+    },
+    "to": {
+        "host": "localhost",
+        "user": "postgres",
+        "password": "sistemas",
+        "dbname": "hades_test"
+    }
+}
