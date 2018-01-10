@@ -1,7 +1,6 @@
 import psycopg2
 import json
 
-from json.decoder import JSONDecodeError
 from django.conf import settings
 from django.core.management import CommandError
 
@@ -18,7 +17,7 @@ def read_file():
         data = json.load(open(CONFIGURATION_FILE))
     except FileNotFoundError:
         raise CommandError('The file %s doesn\'t exists' % CONFIGURATION_FILE)
-    except JSONDecodeError:
+    except ValueError:
         raise CommandError('The file isn\'t a valid format')
     return data
 
